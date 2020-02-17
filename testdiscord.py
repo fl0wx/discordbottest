@@ -1,6 +1,9 @@
+import os
 from discord.ext import commands
 prefix = "?"
 bot = commands.Bot(command_prefix=prefix)
+
+BOT_TOKEN = os.environ['DISCORD_TOKEN']
 
 
 @bot.event
@@ -25,4 +28,4 @@ async def echo(ctx, *, content:str):
     await ctx.send(content)
 
 
-bot.run('Njc4MzQ0NzMxMjI2NTM4MDA0.Xkhmhg.EX5sBvoRYWXQFFxahKT21npsPNk')
+bot.run(BOT_TOKEN)
