@@ -1,5 +1,8 @@
 import os
 from discord.ext import commands
+
+from keep_alive import keep_alive
+
 prefix = "?"
 bot = commands.Bot(command_prefix=prefix)
 
@@ -27,5 +30,9 @@ async def ping(ctx):
 async def echo(ctx, *, content:str):
     await ctx.send(content)
 
+keep_alive()
+prefix = "?"
+bot = commands.Bot(command_prefix=prefix)
 
+BOT_TOKEN = os.environ['DISCORD_TOKEN']
 bot.run(BOT_TOKEN)
