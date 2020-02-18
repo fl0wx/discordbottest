@@ -29,9 +29,5 @@ async def ping(ctx):
 @bot.command()
 async def echo(ctx, *, content:str):
     await ctx.send(content)
-
-prefix = "?"
-bot = commands.Bot(command_prefix=prefix)
-
-BOT_TOKEN = os.environ['DISCORD_TOKEN']
+
 bot.run(BOT_TOKEN)
