@@ -1,1 +1,1 @@
-web: python testdiscord.py 
+worker: python testdiscord.py 
