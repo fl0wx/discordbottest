@@ -30,7 +30,6 @@ async def ping(ctx):
 async def echo(ctx, *, content:str):
     await ctx.send(content)
 
-keep_alive()
 prefix = "?"
 bot = commands.Bot(command_prefix=prefix)
 
